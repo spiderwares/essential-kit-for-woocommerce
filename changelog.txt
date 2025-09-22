@@ -1,6 +1,6 @@
 *** Essential Kit for WooCommerce Changelog ***
 
-2025-09-17 - version 1.0.0
+2025-09-22 - version 1.0.0
 * Initial release.  
 * Includes Product Compare, Wishlist, Quick View, and Size Chart.  
 * Fully responsive design and template override support.

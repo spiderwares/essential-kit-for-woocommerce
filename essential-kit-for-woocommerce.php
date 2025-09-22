@@ -25,7 +25,7 @@ if ( ! defined( 'EKWC_BASENAME' ) ) :
 endif;
 
 if ( ! defined( 'EKWC_VERSION' ) ) :
-    define( 'EKWC_VERSION', '1.0.9' ); // Define the plugin version.
+    define( 'EKWC_VERSION', '1.0.0' ); // Define the plugin version.
 endif;
 
 if ( ! defined( 'EKWC_PATH' ) ) :
