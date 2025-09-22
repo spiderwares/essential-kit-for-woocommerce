@@ -2,11 +2,10 @@
 /**
  * Plugin Name:       Essential Kit For Woocommerce
  * Description:       A powerful, all-in-one toolkit to enhance your WooCommerce store. Includes must-have features like product compare, quick view, wishlist, free shipping bar, multi-currency support, and more — all designed to boost conversions and improve the customer experience.
- * Version:           1.0.8
+ * Version:           1.0.0
  * Requires at least: 5.2
  * Requires PHP:      7.4
- * Author:            jthemesstudio
- * Author URI:        https://jthemes.com/
+ * Author:            pluginsorbit
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Requires Plugins:  woocommerce
@@ -26,7 +25,7 @@ if ( ! defined( 'EKWC_BASENAME' ) ) :
 endif;
 
 if ( ! defined( 'EKWC_VERSION' ) ) :
-    define( 'EKWC_VERSION', '1.0.8' ); // Define the plugin version.
+    define( 'EKWC_VERSION', '1.0.9' ); // Define the plugin version.
 endif;
 
 if ( ! defined( 'EKWC_PATH' ) ) :
@@ -41,24 +40,13 @@ if ( ! defined( 'EKWC_URL' ) ) :
     define( 'EKWC_URL', plugin_dir_url( __FILE__ ) ); // Define the plugin directory URL.
 endif;
 
-if ( ! defined( 'EKWC_REVIEWS' ) ) :
-    define( 'EKWC_REVIEWS', 'https://jthemes.com/' ); // Define the plugin directory URL.
-endif;
-
-if ( ! defined( 'EKWC_CHANGELOG' ) ) :
-    define( 'EKWC_CHANGELOG', 'https://jthemes.com/' ); // Define the plugin directory URL.
-endif;
-
-if ( ! defined( 'EKWC_DISCUSSION' ) ) :
-    define( 'EKWC_DISCUSSION', 'https://jthemes.com/' ); // Define the plugin directory URL.
-endif;
-
 if ( ! defined( 'EKWC_PRO_VERSION_URL' ) ) :
     define( 'EKWC_PRO_VERSION_URL', 'https://codecanyon.net/item/essential-kit-for-woocommerce/57741240' ); // Define the Pro Version URL.
 endif;
 
 if ( ! class_exists( 'EKWC', false ) ) :
     include_once EKWC_PATH . 'includes/class-ekwc.php';
+    include_once EKWC_PATH . 'includes/hpos.php';
 endif;
 
 $GLOBALS['ekwc'] = EKWC::instance();

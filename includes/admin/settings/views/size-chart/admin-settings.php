@@ -32,6 +32,7 @@ if ( ! class_exists( 'EKWC_Size_Chart_Admin_Settings' ) ) :
                         'magnific'          => esc_html__( 'Magnific', 'essential-kit-for-woocommerce' ),
                     ),
                     'data_hide'  => '.popup_library_option',
+                    /* translators: 1: Featherlight link, 2: Magnific link */
                     'desc'       => wp_kses_post( sprintf(
                         __( 'Read more about %1$s and %2$s. We recommend using the popup library that is already used in your theme or other plugins.', 'essential-kit-for-woocommerce' ),
                         '<a href="https://noelboss.github.io/featherlight/" target="_blank">Featherlight</a>',
@@ -95,42 +96,42 @@ if ( ! class_exists( 'EKWC_Size_Chart_Admin_Settings' ) ) :
 
             $fields = array(
                 'use_combined_source' => array(
-                    'title'      => esc_html__( 'Use Combined Source', 'size-chart-for-woocommerce' ),
+                    'title'      => esc_html__( 'Use Combined Source', 'essential-kit-for-woocommerce' ),
                     'field_type' => 'ekwcbuypro',
                     'pro_link'   => EKWC_PRO_VERSION_URL,
                     'default'    => 'no',
                 ),
 
                 'product_type_rule' => array(
-                    'title'      => esc_html__( 'Product Type Rule', 'size-chart-for-woocommerce' ),
+                    'title'      => esc_html__( 'Product Type Rule', 'essential-kit-for-woocommerce' ),
                     'field_type' => 'ekwcbuypro',
                     'pro_link'   => EKWC_PRO_VERSION_URL,
                     'default'    => 'no',
                 ),
 
                 'product_visibility_rule' => array(
-                    'title'      => esc_html__( 'Product Visibility Rule', 'size-chart-for-woocommerce' ),
+                    'title'      => esc_html__( 'Product Visibility Rule', 'essential-kit-for-woocommerce' ),
                     'field_type' => 'ekwcbuypro',
                     'pro_link'   => EKWC_PRO_VERSION_URL,
                     'default'    => 'no',
                 ),
 
                 'product_tag_rule' => array(
-                    'title'      => esc_html__( 'Product Tag Rule', 'size-chart-for-woocommerce' ),
+                    'title'      => esc_html__( 'Product Tag Rule', 'essential-kit-for-woocommerce' ),
                     'field_type' => 'ekwcbuypro',
                     'pro_link'   => EKWC_PRO_VERSION_URL,
                     'default'    => 'no',
                 ),
 
                 'shipping_class_rule' => array(
-                    'title'      => esc_html__( 'Shipping Class Rule', 'size-chart-for-woocommerce' ),
+                    'title'      => esc_html__( 'Shipping Class Rule', 'essential-kit-for-woocommerce' ),
                     'field_type' => 'ekwcbuypro',
                     'pro_link'   => EKWC_PRO_VERSION_URL,
                     'default'    => 'no',
                 ),
 
                 'premium_support' => array(
-                    'title'      => esc_html__( 'Updates & Premium Support', 'size-chart-for-woocommerce' ),
+                    'title'      => esc_html__( 'Updates & Premium Support', 'essential-kit-for-woocommerce' ),
                     'field_type' => 'ekwcbuypro',
                     'pro_link'   => EKWC_PRO_VERSION_URL,
                     'default'    => 'no',

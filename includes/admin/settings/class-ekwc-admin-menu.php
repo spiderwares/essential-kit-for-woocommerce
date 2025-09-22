@@ -112,16 +112,6 @@ if ( ! class_exists( 'EKWC_Admin_Menu' ) ) :
                 [ $this, 'admin_menu_content' ] 
             );
 
-            // Add Free Shipping Bar submenu
-            add_submenu_page( 
-                'essential_kit', 
-                esc_html__( 'Essential Kit Free Shipping Bar', 'essential-kit-for-woocommerce' ), 
-                esc_html__( 'Free Shipping Bar', 'essential-kit-for-woocommerce' ), 
-                'manage_options', 
-                'ekwc-free-shipping-bar', 
-                [ $this, 'free_shipping_bar_menu_content' ] 
-            );
-
             // Add Wishlist submenu
             add_submenu_page( 
                 'essential_kit', 
@@ -157,7 +147,7 @@ if ( ! class_exists( 'EKWC_Admin_Menu' ) ) :
          * Display content for the Product Compare settings page.
          */
         public function admin_menu_content() {
-            // Get the active tab (default to 'general')
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended
             $active_tab = isset( $_GET['tab'] ) ? sanitize_key( $_GET['tab'] ) : 'general';
 
             // Include the view file for the Product Compare settings page
@@ -165,21 +155,10 @@ if ( ! class_exists( 'EKWC_Admin_Menu' ) ) :
         }
 
         /**
-         * Display content for the Free Shipping Bar settings page.
-         */
-        public function free_shipping_bar_menu_content() {
-            // Get the active tab (default to 'general')
-            $active_tab = isset( $_GET['tab'] ) ? sanitize_key( $_GET['tab'] ) : 'general';
-
-            // Include the view file for the Free Shipping Bar settings page
-            require_once EKWC_PATH . 'includes/admin/settings/views/free-shipping-bar-menu.php';
-        }
-
-        /**
          * Display content for the Wishlist settings page.
          */
         public function wishlist_menu_content() {
-            // Get the active tab (default to 'general')
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended
             $active_tab = isset( $_GET['tab'] ) ? sanitize_key( $_GET['tab'] ) : 'general';
 
             // Include the view file for the Wishlist settings page
@@ -190,7 +169,7 @@ if ( ! class_exists( 'EKWC_Admin_Menu' ) ) :
          * Display content for the Quick View settings page.
          */
         public function quick_view_menu_content() {
-            // Get the active tab (default to 'general')
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended
             $active_tab = isset( $_GET['tab'] ) ? sanitize_key( $_GET['tab'] ) : 'general';
 
             // Include the view file for the Quick View settings page
@@ -201,7 +180,7 @@ if ( ! class_exists( 'EKWC_Admin_Menu' ) ) :
          * Display content for the Size Chart settings page.
          */
         public function size_chart_menu_content() {
-            // Get the active tab (default to 'general')
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended
             $active_tab = isset( $_GET['tab'] ) ? sanitize_key( $_GET['tab'] ) : 'general';
 
             // Include the view file for the Size Chart settings page

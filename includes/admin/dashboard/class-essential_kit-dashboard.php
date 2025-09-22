@@ -1,10 +1,10 @@
 <?php
 /**
- * JThemes Dashboard Class
+ * Dashboard Class
  *
  * Handles the admin dashboard setup and related functionalities.
  *
- * @package JThemes
+ * @package Essential_Kit_For_WooCommerce
  */
 
 // Exit if accessed directly.
@@ -15,7 +15,7 @@ if ( ! class_exists( 'Essential_Kit_Dashboard' ) ) {
 	/**
 	 * Class Essential_Kit_Dashboard
 	 *
-	 * Initializes the admin dashboard for JThemes.
+	 * Initializes the admin dashboard for.
 	 */
 	class Essential_Kit_Dashboard {
 
@@ -39,9 +39,9 @@ if ( ! class_exists( 'Essential_Kit_Dashboard' ) ) {
 		 * Enqueue admin-specific styles for the dashboard.
 		 */
 		public function enqueue_scripts() {
-			// Enqueue the JThemes dashboard CSS.
+			// Enqueue the dashboard CSS.
 			wp_enqueue_style(
-				'jthemes-dashboard',
+				'pluginsorbit-dashboard',
 				EKWC_URL . '/assets/css/admin-styles.css',
 				[],
 				EKWC_VERSION 
@@ -59,7 +59,7 @@ if ( ! class_exists( 'Essential_Kit_Dashboard' ) ) {
 		}
 
 		/**
-		 * Add JThemes menu and submenu to the WordPress admin menu.
+		 * Add menu and submenu to the WordPress admin menu.
 		 */
 		public function admin_menu() {
 			// Add the main menu page.
@@ -73,7 +73,7 @@ if ( ! class_exists( 'Essential_Kit_Dashboard' ) ) {
 				26
 			);
 
-			// Add a submenu page under the main JThemes menu.
+			// Add a submenu page under the main menu.
 			add_submenu_page( 
                 'essential_kit',
                 esc_html__( 'Essential Kit General', 'essential-kit-for-woocommerce' ), 
@@ -87,6 +87,7 @@ if ( ! class_exists( 'Essential_Kit_Dashboard' ) ) {
 		 * Callback function for rendering the dashboard content.
 		 */
 		public function dashboard_callback() {
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			$active_tab = isset( $_GET['tab'] ) ? sanitize_key( $_GET['tab'] ) : 'general';
 			// Include the about page view file.
 			require_once EKWC_PATH . 'includes/admin/dashboard/views/about.php';

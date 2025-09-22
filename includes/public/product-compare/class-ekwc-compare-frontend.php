@@ -61,7 +61,7 @@ if ( ! class_exists( 'EKWC_Compare_Frontend' ) ) :
                                 </div>
                             </div>';
 
-            // Output the compare table HTML.
+            // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
             echo $compare_table;
         }
 

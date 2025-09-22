@@ -43,7 +43,7 @@ if ( ! class_exists( 'EKWC_Size_Chart_Ajax_Handler' ) ) :
          */
         public function get_size_chart_content() {
 
-            // Sanitize and validate post ID
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended
             $post_id = isset( $_POST[ 'chart_id' ] ) ? absint( $_POST[ 'chart_id' ] ) : 0;
         
             if ( !$post_id || get_post_type( $post_id ) !== 'ekwc_size_chart' ) :

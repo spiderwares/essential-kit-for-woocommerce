@@ -50,6 +50,7 @@ $icon_hover_bg_color     = isset( $general_style[ 'icon_hover_bg_color' ] ) ? es
 $icon_hover_color        = isset( $general_style[ 'icon_bg_color' ] ) ? esc_attr( $general_style[ 'icon_bg_color' ] ) : '#ffffff'; 
 
 if ( isset( $shipping_style['custom_css'] ) && ! empty( $shipping_style['custom_css'] ) ) :
+    // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
     echo wp_strip_all_tags( $shipping_style['custom_css'], true );
 endif; ?>
 

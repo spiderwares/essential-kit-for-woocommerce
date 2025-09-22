@@ -77,11 +77,6 @@ if( ! class_exists( 'EKWC_Quick_View_Admin_Settings' ) ):
          */
         public static function style_field() {
             $fields = array(
-                'quick_view_section' => array(
-                    'title'      => esc_html__('Quick View', 'essential-kit-for-woocommerce'),
-                    'field_type' => 'ekwctitle',
-                    'default'    => '',
-                ),
                 'content_background' => array(
                     'title'      => esc_html__('Content Background', 'essential-kit-for-woocommerce'),
                     'field_type' => 'ekwccolor',

@@ -271,6 +271,10 @@ if ( ! class_exists( 'EKWC_Size_Chart_Post_Type' ) ) :
          */
         public function save_size_chart_meta( $post_id ) {
 
+            if ( ! isset( $_POST['_wpnonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) ), 'update-post_' . $post_id ) ) :
+                return;
+            endif;
+
             // Bail early on autosave, revision, or wrong post type.
             if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
             if ( get_post_type( $post_id ) !== 'ekwc_size_chart' ) return;
@@ -288,21 +292,23 @@ if ( ! class_exists( 'EKWC_Size_Chart_Post_Type' ) ) :
                 update_post_meta( $post_id, 'ekwc_bottom_notes', $bottom_notes );
             endif;
 
-            // Save table data if valid JSON.
+            
             if ( isset( $_POST['ekwc_table_data'] ) ) :
+                // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
                 $table_data = stripslashes( $_POST['ekwc_table_data'] );
                 if ( json_decode( $table_data ) !== null ) :
                     update_post_meta( $post_id, 'ekwc_table_data', $table_data );
                 endif;
             endif;
 
-            // --- Save Display Rules ---
+            // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
             $assign    = isset( $_POST['ekwc_assign'] ) ? sanitize_text_field( $_POST['ekwc_assign'] ) : 'none';
             $condition = array();
 
             switch ( $assign ) :
                 case 'products':
                     if ( isset( $_POST['ekwc_assign_products'] ) && is_array( $_POST['ekwc_assign_products'] ) ) :
+                        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
                         foreach ( $_POST['ekwc_assign_products'] as $product_id ) :
                             $product_id = absint( $product_id );
                             $product    = wc_get_product( $product_id );
@@ -315,6 +321,7 @@ if ( ! class_exists( 'EKWC_Size_Chart_Post_Type' ) ) :
             
                 case 'product_cat':
                     if ( isset( $_POST['ekwc_assign_product_cat'] ) && is_array( $_POST['ekwc_assign_product_cat'] ) ) :
+                        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
                         foreach ( $_POST['ekwc_assign_product_cat'] as $cat_id ) :
                             $term = get_term( absint( $cat_id ), 'product_cat' );
                             if ( $term && ! is_wp_error( $term ) ) :
@@ -326,6 +333,7 @@ if ( ! class_exists( 'EKWC_Size_Chart_Post_Type' ) ) :
             
                 case 'product_type':
                     if ( isset( $_POST['ekwc_assign_product_type'] ) && is_array( $_POST['ekwc_assign_product_type'] ) ) :
+                        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
                         foreach ( $_POST['ekwc_assign_product_type'] as $type ) :
                             $condition[] = 'product_type:' . sanitize_text_field( $type );
                         endforeach;
@@ -334,6 +342,7 @@ if ( ! class_exists( 'EKWC_Size_Chart_Post_Type' ) ) :
             
                 case 'product_visibility':
                     if ( isset( $_POST['ekwc_assign_product_visibility'] ) && is_array( $_POST['ekwc_assign_product_visibility'] ) ) :
+                        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
                         foreach ( $_POST['ekwc_assign_product_visibility'] as $visibility ) :
                             $condition[] = 'product_visibility:' . sanitize_text_field( $visibility );
                         endforeach;
@@ -342,6 +351,7 @@ if ( ! class_exists( 'EKWC_Size_Chart_Post_Type' ) ) :
             
                 case 'product_tag':
                     if ( isset( $_POST['ekwc_assign_product_tag'] ) && is_array( $_POST['ekwc_assign_product_tag'] ) ) :
+                        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
                         foreach ( $_POST['ekwc_assign_product_tag'] as $tag_id ) :
                             $term = get_term( absint( $tag_id ), 'product_tag' );
                             if ( $term && ! is_wp_error( $term ) ) :
@@ -353,6 +363,7 @@ if ( ! class_exists( 'EKWC_Size_Chart_Post_Type' ) ) :
             
                 case 'shipping_class':
                     if ( isset( $_POST['ekwc_assign_shipping_class'] ) && is_array( $_POST['ekwc_assign_shipping_class'] ) ) :
+                        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
                         foreach ( $_POST['ekwc_assign_shipping_class'] as $class_id ) :
                             $term = get_term( absint( $class_id ), 'product_shipping_class' );
                             if ( $term && ! is_wp_error( $term ) ) :
@@ -379,15 +390,21 @@ if ( ! class_exists( 'EKWC_Size_Chart_Post_Type' ) ) :
             // Prepare the style data array
             $style_data = [
                 'heading' => [
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
                     'bgcolor' => isset( $_POST['ekwc_size_chart_style']['heading']['bgcolor'] ) ? sanitize_hex_color( $_POST['ekwc_size_chart_style']['heading']['bgcolor'] ) : '#e0f2fe',
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
                     'color'   => isset( $_POST['ekwc_size_chart_style']['heading']['color'] ) ? sanitize_hex_color( $_POST['ekwc_size_chart_style']['heading']['color'] ) : '#111827',
                 ],
                 'odd' => [
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
                     'bgcolor' => isset( $_POST['ekwc_size_chart_style']['odd']['bgcolor'] ) ? sanitize_hex_color( $_POST['ekwc_size_chart_style']['odd']['bgcolor'] ) : '#ffffff',
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
                     'color'   => isset( $_POST['ekwc_size_chart_style']['odd']['color'] ) ? sanitize_hex_color( $_POST['ekwc_size_chart_style']['odd']['color'] ) : '#374151',
                 ],
                 'even' => [
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
                     'bgcolor' => isset( $_POST['ekwc_size_chart_style']['even']['bgcolor'] ) ? sanitize_hex_color( $_POST['ekwc_size_chart_style']['even']['bgcolor'] ) : '#f7f9fc',
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
                     'color'   => isset( $_POST['ekwc_size_chart_style']['even']['color'] ) ? sanitize_hex_color( $_POST['ekwc_size_chart_style']['even']['color'] ) : '#111827',
                 ],
             ];

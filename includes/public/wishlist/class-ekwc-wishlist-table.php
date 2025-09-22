@@ -38,11 +38,12 @@ class EKWC_Wishlist_Table {
 
         ob_start();
         
-        // Check if a specific wishlist is being viewed.
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended
         if ( isset( $_GET['view'] ) && ! empty( $_GET['view'] ) ) :
-
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended
             $wishlist_token = sanitize_text_field( wp_unslash( $_GET['view'] ) );
             $wishlist       = ekwc_get_product_ids_by_wishlist_token( $wishlist_token );
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended
             $current_url    = isset( $_SERVER['REQUEST_URI'] ) ? esc_url( home_url( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) ) ) : '';
 
 

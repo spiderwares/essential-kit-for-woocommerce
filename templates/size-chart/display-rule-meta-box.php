@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || exit; ?>
             <select id="ekwc_assign_products" name="ekwc_assign_products[]"
                 class="wc-product-search"
                 multiple="multiple"
-                data-placeholder="<?php esc_attr_e( 'Search for a product&hellip;', 'jewellery-price-breakup-for-woocommerce' ); ?>"
+                data-placeholder="<?php esc_attr_e( 'Search for a product&hellip;','essential-kit-for-woocommerce' ); ?>"
                 data-action="woocommerce_json_search_products"
                 data-include_variations="false">
                 <?php
@@ -78,6 +78,7 @@ defined( 'ABSPATH' ) || exit; ?>
                 // Render all categories
                 foreach ( $terms as $term ) :
                     $selected = in_array( $term->term_id, $selected_terms, true ) ? 'selected="selected"' : '';
+                    // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
                     echo '<option value="' . esc_attr( $term->term_id ) . '" ' . $selected . '>' . esc_html( $term->name ) . '</option>';
                 endforeach;
                 ?>

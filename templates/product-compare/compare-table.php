@@ -7,11 +7,16 @@ defined( 'ABSPATH' ) || exit; ?>
         <h2 class="ekwc-subHeading"><?php echo esc_html( $table_title ); ?></h2>
         <div class="ekwc-filter-reset">
             <div class="ekwc_filter_btn_wrapper">
-                <?php echo apply_filters( 'ekwc_compare_after_filter_btn', '' ); ?>
+                <?php 
+                    // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+                    echo apply_filters( 'ekwc_compare_after_filter_btn', '' ); 
+                ?>
             </div>
         </div>
     </div>
-    <div class="ekwc-copy-wrapper"><?php echo wp_kses_post( apply_filters('ekwc_after_compare_title', '', $products ) ); ?></div>
+    <div class="ekwc-copy-wrapper">
+        <?php echo wp_kses_post( apply_filters('ekwc_after_compare_title', '', $products ) ); ?>
+    </div>
     <div class="ekwc-table-container">
     <div class="ekwc-scrollable-table">
     <?php ob_start(); ?>

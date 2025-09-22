@@ -267,7 +267,7 @@ if ( ! class_exists( 'EKWC_Size_Chart_Frontend' ) ) :
                         $chart_id    = (int) $chart_data['chart']->ID;
                         $chart_title = esc_html( $chart_data['chart']->post_title );
 
-                        echo '<a class="ekwc-btn ekwc-size-charts-list-item" data-id="' . $chart_id . '">' . $chart_title . '</a>';
+                        echo '<a class="ekwc-btn ekwc-size-charts-list-item" data-id="' . esc_attr( $chart_id ) . '">' . esc_html( $chart_title ) . '</a>';
                     endif;
                 endforeach;
 

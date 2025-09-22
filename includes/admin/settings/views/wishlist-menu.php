@@ -5,6 +5,8 @@ defined( 'ABSPATH' ) || exit;
 ?>
 <div class="ekwc_admin_page ekwc_admin_settings_page wrap">
 
+    <h2 class="ekwc_empty"></h2>
+
     <!-- Navigation tabs for plugin settings -->
     <div class="ekwc_admin_settings_page_nav">
         <h2 class="nav-tab-wrapper">

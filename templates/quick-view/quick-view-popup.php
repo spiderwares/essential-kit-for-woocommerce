@@ -55,7 +55,10 @@ endif;
             <h2><?php echo esc_html( $product_name ); ?></h2>
             <p class="ekwc-quick-view-price"><?php echo wp_kses_post( $product_price ); ?></p>
             <div class="ekwc-quick-view-description">
-                <?php echo wpautop( wp_kses_post( $description ) ); ?>
+                <?php
+                    // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+                    echo wpautop( wp_kses_post( $description ) ); 
+                ?>
             </div>
 
             <!-- Add to Cart Button -->

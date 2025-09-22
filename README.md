@@ -1,10 +1,10 @@
 # Essential Kit For Woocommerce
-**Contributors:** jthemesstudio, spiderwares
+**Contributors:** pluginsorbit
 **Requires at least:** 5.2  
 **Tested up to:** 6.8
 **Requires PHP:** 7.4  
-**Version:** 1.0.8
-**Stable tag:** 1.0.8
+**Version:** 1.0.0
+**Stable tag:** 1.0.0
 **License:** GPL v2 or later  
 **License URI:** [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)  
 **Tags:** WooCommerce, Product Compare, Wishlist, Quick View, Free Shipping Bar  
@@ -38,20 +38,6 @@ Enhance your WooCommerce store with essential tools like Product Compare, Wishli
 ⭐ Compatible with all WordPress and WooCommerce themes
 ⭐ User-friendly customization panel
 ⭐ 24×7 support available for the free version
-
-#### Free Shipping Bar
-
-⭐ Enable or disable the Free Shipping Bar globally
-⭐ Select shipping zones for targeted display
-⭐ Responsive top bar for desktop and mobile
-⭐ Choose display position on Home, Cart, Checkout, Product, Shop, or Category pages
-⭐ Customize background, text, and link colors
-⭐ Set font size and text alignment
-⭐ Show/hide the progress bar with custom styling options
-⭐ Add gift box or custom icons to draw attention
-⭐ Set initial display delay for better timing
-⭐ Add announcement, purchase, success, or error notifications
-⭐ Add custom CSS for deeper styling Control
 
 #### Wishlist
 
@@ -118,16 +104,6 @@ Enhance your WooCommerce store with essential tools like Product Compare, Wishli
 ⭐ Support for both global and custom product attributes (e.g., Color, Material, Storage, Country of Origin, Size)
 ⭐ Style every element of the comparison table individually
 ⭐ Set custom product image sizes for the table
-
-#### Free Shipping Bar
-
-⭐ Show shipping bar on Mini Cart, Cart, Checkout, and Single Product pages
-⭐ Predefined styles for each page location (Mini Cart, Cart, Checkout)
-⭐ Full styling options: progress bar colors, text color, background styles
-⭐ Enable a close button to dismiss the bar
-⭐ Set auto-close timer for the bar
-⭐ Add predefined gift box styles to enhance visual appeal
-⭐ Create a more immersive shopping incentive experience
 
 #### Wishlist
 

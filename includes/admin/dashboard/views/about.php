@@ -7,33 +7,7 @@ endif;
 
 <div class="ekwc_admin_page ekwc_welcome_page wrap ekwc_admin_settings_page">
 
-    <div class="card">
-    <!-- Display the plugin title and version -->
-        <h1 class="title">
-            <?php 
-            // Output the plugin title, version, and premium label (if applicable).
-            echo esc_html__( 'Essential Kit For WooCommerce', 'essential-kit-for-woocommerce' ) . ' ' . esc_html( EKWC_VERSION ) ; 
-            ?>
-        </h1>
-
-        <!-- Plugin description and external links -->
-        <div class="ekwc_settings_page_desc about-text">
-            <p>
-                <?php 
-                // Translators: %s is replaced with a five-star rating HTML.
-                printf( 
-                    esc_html__( 'Thank you for choosing our plugin! If you’re happy with its performance, we’d be grateful if you could give us a five-star %s rating. Your support helps us improve and deliver even better features.', 'essential-kit-for-woocommerce' ), 
-                    '<span style="color:#ff0000">&#9733;&#9733;&#9733;&#9733;&#9733;</span>' 
-                );
-                ?>
-                <br/>
-                <!-- Add links to reviews, changelog, and discussion pages -->
-                <a href="<?php echo esc_url( EKWC_REVIEWS ); ?>" target="_blank"><?php esc_html_e( 'Reviews', 'essential-kit-for-woocommerce' ); ?></a> |
-                <a href="<?php echo esc_url( EKWC_CHANGELOG ); ?>" target="_blank"><?php esc_html_e( 'Changelog', 'essential-kit-for-woocommerce' ); ?></a> |
-                <a href="<?php echo esc_url( EKWC_DISCUSSION ); ?>" target="_blank"><?php esc_html_e( 'Discussion', 'essential-kit-for-woocommerce' ); ?></a>
-            </p>
-        </div>
-    </div>
+    <h2 class="ekwc_empty"></h2>
     
     <div class="ekwc_admin_settings_page_nav">
         <h2 class="nav-tab-wrapper">

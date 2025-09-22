@@ -26,7 +26,7 @@ $options = get_option( 'ekwc_quick_view_setting', true );
 wc_get_template(
     'fields/setting-forms.php',
     array(
-        'title'   => 'Style Settings',
+        'title'   => 'Style Options',
         'metaKey' => 'ekwc_quick_view_setting',
         'fields'  => $fields,
         'options' => $options,

@@ -82,11 +82,8 @@ if ( ! class_exists( 'EKWC' ) ) :
         public function includes() {
             require_once EKWC_PATH . 'includes/public/product-compare/class-ekwc-compare-ajax-handler.php';
             require_once EKWC_PATH . 'includes/public/wishlist/class-ekwc-ajax-handler.php';
-            require_once EKWC_PATH . 'includes/public/free-shipping-bar/class-ekwc-shipping-options.php';
-            require_once EKWC_PATH . 'includes/public/free-shipping-bar/class-ekwc-shipping-bar-ajax-handler.php';
             require_once EKWC_PATH . 'includes/ekwc-functions.php';
             require_once EKWC_PATH . 'includes/public/quick-view/class-ekwc-quick-view-ajax-handler.php';
-            require_once EKWC_PATH . 'includes/public/free-shipping-bar/class-ekwc-shipping-bar-frontend.php';
             require_once EKWC_PATH . 'includes/public/size-chart/class-ekwc-size-chart-ajax-handler.php';
             if( is_admin() ) :
                 $this->includes_admin();

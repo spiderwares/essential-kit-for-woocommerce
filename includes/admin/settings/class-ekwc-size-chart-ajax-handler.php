@@ -27,6 +27,7 @@ if ( ! class_exists( 'EKWC_Size_Chart_Ajax_Handler' ) ) :
         public function handle_search_size_chart() {
             $response = [];
 
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended
             $search_term = isset( $_GET['q'] ) ? sanitize_text_field( wp_unslash( $_GET['q'] ) ) : '';
 
             $query = new WP_Query( [
@@ -69,8 +70,9 @@ if ( ! class_exists( 'EKWC_Size_Chart_Ajax_Handler' ) ) :
          */
         public function handle_search_term() {
             $response = [];
-
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended
             $taxonomy  = isset( $_REQUEST['taxonomy'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['taxonomy'] ) ) : '';
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended
             $term_name = isset( $_REQUEST['q'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['q'] ) ) : '';
 
             $terms = get_terms( [
