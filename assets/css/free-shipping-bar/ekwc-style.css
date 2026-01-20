@@ -1,0 +1,394 @@
+#ekwc-shipping-bar-gift-box-icon {
+	cursor: pointer;
+	position: fixed;
+	z-index: 999999;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+#ekwc-shipping-bar-gift-box-icon.bottom_right{
+	bottom: 0;
+	right: 0;
+}
+
+#ekwc-shipping-bar-gift-box-icon.bottom_left{
+	bottom: 0;
+	left: 0;
+}
+
+#ekwc-shipping-bar-gift-box-icon.top_left{
+	top: 0;
+	left: 0;
+}
+
+#ekwc-shipping-bar-gift-box-icon.top_right{
+	top: 0;
+	right: 0;
+}
+
+#ekwc-shipping-bar-topbar {
+	position: fixed;
+	z-index: 99999;
+	width: 100%;
+	padding: 10px 80px;
+}
+#ekwc-shipping-bar-topbar .ekwc-shipping-bar-container{
+	position: relative;
+}
+
+#ekwc-shipping-bar-topbar .closebar {
+	cursor: pointer;
+	position: absolute;
+	right: 3px;
+	top: 0px;
+	font-weight: bolder;
+}
+
+.ekwc_shipping_topbar_wrap {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+#ekwc-shipping-bar-topbar p {
+	margin: 0;
+	flex-grow: 1;
+}
+
+#ekwc-shipping-bar-topbar.top_bar {
+	top: 0
+}
+
+#ekwc-shipping-bar-topbar.bottom_bar {
+	bottom: 0
+}
+
+.progress.progress-1,
+.progress-bar.progress-bar-1 {
+	height: 7px;
+}
+
+.progress.progress-1,
+.progress-bar.progress-bar-1 {
+	border-radius: 25px;
+}
+
+div#ekwc-shipping-bar-label {
+	text-align: center;
+	line-height: 16px;
+}
+
+/****************************** Single Product **********************************/
+div#ekwc_barcontainer {
+	width: 100%;
+	margin: 15px 0px;
+}
+
+div#ekwc_barcontainer .ekwc-shipping-bar-single_product_bar,
+.ekwc-shipping-bar-single_product_progress {
+	height: 8px;
+	border-radius: 20px;
+	max-width: 100%;
+}
+
+.ekwc_single_product_info {
+	display: flex;
+	justify-content: space-between;
+}
+.ekwc-shipping-bar-single_product_bar_content bdi,
+.ekwc_single_product_info  bdi {
+	font-size: 18px;
+	font-weight: 500;
+}
+.ekwc-shipping-bar-container {
+	max-width: 1024px;
+	margin: 0 auto;
+	width: 80%;
+}
+.ekwc_single_product_info-success{
+	font-weight: 500;
+	padding: 0.75rem 1.25rem;
+	border-radius: 9px;
+	margin: 15px 0px;
+	color: #155724;
+	background-color: #d4edda;
+}
+
+/************************************************ Cart ****************************************/
+.ekwc-shipping-bar-cart-progress-wrapper .progress-bar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	background: radial-gradient(closest-side, white 87%, transparent 90% 100%), conic-gradient(var(--curr_bg_color) var(--width), var(--bg_color) 0);
+}
+
+
+.ekwc-shipping-bar-cart-progress-title {
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+
+.ekwc-shipping-bar-cart-progress-wrapper .progress-bar {
+	margin: 0 auto;
+}
+
+#ekwc-shipping-bar-topbar .progress-bar{
+	transition: width 0.5s ease-in-out;
+}
+
+.ekwc-shipping-bar-cart-progress-wrapper .ekwc-shipping-bar-cart-progress-title h5 {
+	font-size: 24px;
+	font-weight: 700;
+	margin: 0px;
+}
+
+.ekwc-shipping-bar-cart-progress-wrapper .ekwc-shipping-bar-cart-progress-title p {
+	font-size: 17px;
+	margin: 0;
+	letter-spacing: 1px;
+}
+
+.ekwc-shipping-bar-cart-progress-wrapper .ekwc-shipping-bar--progressbar_label {
+	font-size: 24px;
+	text-align: center;
+}
+
+.ekwc_shipping_topbar_wrap .rectangle-10 h3 {
+	margin: 0;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+#ekwc-shipping-bar-topbar.rectangle-3 {
+	display: flex;
+	padding: 14px;
+}
+
+#ekwc-shipping-bar-topbar.rectangle-3 .progress-bar.progress-bar-2,
+#ekwc-shipping-bar-topbar.rectangle-3 .progress-2 {
+	height: 7px;
+	border-radius: 10px;
+}
+
+#ekwc-shipping-bar-topbar.rectangle-3 .progress-bar-2 .pricing {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	top: 20px;
+}
+
+#ekwc-shipping-bar-topbar.rectangle-3 .ekwc-shipping-bar-container {
+	display: flex;
+}
+
+#ekwc-shipping-bar-topbar.rectangle-3 .ekwc-shipping-bar-container .content {
+	padding: 0 15px;
+}
+
+
+/*************************************************** Modal Popup ****************************************************************************/
+
+.ekwc-shipping-bar-model-main {
+	text-align: center;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+	opacity: 0;
+	-webkit-transition: opacity 0.15s linear, z-index 0.15;
+	-o-transition: opacity 0.15s linear, z-index 0.15;
+	transition: opacity 0.15s linear, z-index 0.15;
+	z-index: -1;
+	overflow-x: hidden;
+	overflow-y: auto;
+	max-width: 419px;
+	margin: 0 auto;
+}
+
+.ekwc-shipping-bar-model-main.model-open {
+	z-index: 99999;
+	opacity: 1;
+	overflow: hidden;
+}
+
+.ekwc-shipping-bar-model-main .ekwc-shipping-bar-model-inner {
+	-webkit-transform: translate(0, -25%);
+	-ms-transform: translate(0, -25%);
+	transform: translate(0, -25%);
+	-webkit-transition: -webkit-transform 0.3s ease-out;
+	-o-transition: -o-transform 0.3s ease-out;
+	transition: -webkit-transform 0.3s ease-out;
+	-o-transition: transform 0.3s ease-out;
+	transition: transform 0.3s ease-out;
+	transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+	display: inline-block;
+	vertical-align: middle;
+	width: 600px;
+	margin: 30px auto;
+	max-width: 97%;
+}
+
+.ekwc-shipping-bar-model-main .ekwc-shipping-bar-model-wrap {
+	display: block;
+	width: 100%;
+	position: relative;
+	background-color: var(--bg_gift_color );
+	border-radius: 6px;
+	background-clip: padding-box;
+	outline: 0;
+	text-align: left;
+	padding: 50px 15px;
+	box-sizing: border-box;
+	max-height: calc(100vh - 70px);
+	overflow-y: auto;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.ekwc-shipping-bar-model-main.model-open .ekwc-shipping-bar-model-inner {
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	transform: translate(0, 0);
+	position: relative;
+	z-index: 999;
+}
+
+.ekwc-shipping-bar-model-main.model-open .bg-overlay {
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 99;
+}
+
+.ekwc-shipping-bar-model-main .bg-overlay {
+	background: rgba(0, 0, 0, 0);
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	-webkit-transition: background 0.15s linear;
+	-o-transition: background 0.15s linear;
+	transition: background 0.15s linear;
+}
+
+.ekwc-shipping-bar-model-main .rectangle.rectangle-2 .content {
+	background-color: var(--bg_gift_color);
+	height: 100%;
+	margin: 8px;
+	margin-bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	line-height: 1.2;
+}
+
+.ekwc-shipping-bar-model-main .content-inner {
+	padding: 0 70px;
+	z-index: 9;
+	text-align: center;
+}
+
+.ekwc-shipping-bar-model-main .rectangle.rectangle-2 a {
+	height: 65px;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin-top: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+	position: relative;
+}
+
+@media screen and (min-width:800px) {
+	.ekwc-shipping-bar-model-main:before {
+		content: "";
+		display: inline-block;
+		height: auto;
+		vertical-align: middle;
+		margin-right: -0px;
+		height: 100%;
+	}
+}
+
+@media screen and (max-width:799px) {
+	.ekwc-shipping-bar-model-main .ekwc-shipping-bar-model-inner {
+		margin-top: 45px;
+	}
+}
+
+.ekwc-shipping-bar-model-main div#ekwc-shipping-bar-close {
+    position: absolute;
+    top: -55px;
+    right: -15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    font-size: 35px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.ekwc-shipping-bar-model-main .rectangle-8 .progress-4 {
+	height: 18px;
+	margin: 20px 0px;
+	border-radius: 16px;
+}
+.ekwc-shipping-bar-model-main .rectangle-8 .progress {
+	display: flex;
+	border-radius: 10px;
+}
+
+.ekwc-shipping-bar-model-main .progress-bar-striped {
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-size: 1rem 1rem;
+}
+.ekwc-shipping-bar-model-main .progress-bar-4 {
+	border-radius: 16px;
+	position: relative;
+}
+
+.ekwc-shipping-bar-model-main .progress-bar-4::before {
+	content: var( --width );
+	position: absolute;
+	right: -30px;
+	top: 3px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.ekwc-shipping-bar-model-main .progress-3 {
+	height: 30px;
+	margin-top: 2rem;
+	border-radius: 16px;
+}
+
+.ekwc-shipping-bar-model-main  .progress-bar-3 {
+	border-radius: 16px;
+	position: relative;
+	height: 30px;
+}
+
+
+/*********************************************************************** End Modal Popup ******************************************************************/

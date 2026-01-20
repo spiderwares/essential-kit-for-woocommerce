@@ -1,0 +1,468 @@
+.ekwc-compare-product .ekwc-compare-img {
+  max-width: 150px;
+}
+
+.ekwc-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+  
+.ekwc-subHeading {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ekwc-filter-reset {
+  font-size: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  align-content: center;
+  align-items: center;
+}
+
+.ekwc-filter-reset button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ekwc-filter-btn {
+  cursor: pointer;
+  background-color: #9dc997;
+  padding: 9.6px 32px;
+  color: #ffffff;
+  border-radius: 3px;
+  margin-left: 16px;
+  font-size: 16px;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.ekwc-compare-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  text-align: center;
+}
+
+.ekwc-check {
+  width: 16px;
+  height: 16px;
+  margin-bottom: 25px;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+}
+
+.ekwc-check:checked {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+
+.ekwc-check:checked::after {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: 2px;
+  left: 5px;
+}
+.ekwc-name {
+  padding: 20px 0 0 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.ekwc-compare-product p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.ekwc-reset-btn {
+  color: #404042;
+  text-decoration: underline;
+  background: none;
+}
+
+.ekwc-filter-btn:disabled {
+  padding: 9.6px 32px;
+  color: #ffffff;
+  background-color: #cccccc;
+  border-radius: 3px;
+  margin-left: 16px;
+  font-size: 16px;
+  cursor: not-allowed;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+
+/* Comparison Table */
+
+
+.ekwc-table-container {
+  margin-bottom: 96px;
+  padding-top: 20px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.ekwc-scrollable-table {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  /* white-space: nowrap; */
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.ekwc-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ekwc-comparison-table th.ekwc-info,
+.ekwc-comparison-table td.ekwc-info {
+  text-align: left;
+  text-transform: uppercase;
+  position: sticky;
+  left: 0;
+  font-size: 10px;
+  border-style: solid;
+  border-color: #e6e6e6;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  z-index: 1;
+  background-color: #fafafa;
+  opacity: 0.95;
+}
+
+table.ekwc-comparison-table {
+  width: max-content;
+  border-collapse: collapse;
+}
+
+.ekwc-comparison-table th,
+.ekwc-comparison-table td {
+  padding: 20px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.ekwc-comparison-table td img {
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+.ekwc-comparison-table td {
+  font-size: 15px;
+}
+.ekwc-comparison-table th.ekwc-info {
+  position: sticky;
+  top: 0;
+  text-align: left;
+  vertical-align: top;
+  font-size: 10px;
+  text-transform: uppercase;
+  background-color: #fafafa;
+  z-index: 1;
+  opacity: 0.95;
+}
+
+.ekwc-comparison-table th,
+.ekwc-comparison-table td {
+  min-width: 10px;
+}
+
+.ekwc-comparison-table td{
+  max-width: 310px;
+  font-weight: normal;
+}
+
+.ekwc-comparison-table .ekwc-info{
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 1170px) {
+
+  .ekwc-subHeading {
+    font-size: 23px;
+  }
+  .ekwc-name {
+    padding-top: 22.4px;
+    font-size: 17px;
+  }
+  .ekwc-compare-img {
+    max-width: 230px;
+  }
+
+  .ekwc-comparison-table th.ekwc-info,
+  .ekwc-comparison-table td.ekwc-info {
+    font-size: 12px;
+    width: 210px;
+    max-width: 200px;
+  }
+
+  .ekwc-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0 65px 25px; */
+  }
+
+  .ekwc-compare-product {
+    padding: 0 20px 0 20px;
+  }
+}
+  
+
+.ekwc-compare-add-to-cart p {
+	margin: 0;
+	padding: 0 !important;
+	border: none !important;
+}
+
+.ekwc-compare-modal {
+	display: none;
+	/* Initially hidden */
+	position: fixed;
+	z-index: 99999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.ekwc-compare-modal.show {
+	display: block;
+}
+
+.ekwc-compare-modal-content {
+	background-color: #fff;
+	padding: 15px 0 2px 0;
+	width: 100%;
+  height: 100vh;
+}
+
+.ekwc-compare-modal-close {
+  position: absolute;
+  font-size: 32px;
+  cursor: pointer;
+  right: 15px;
+  top: 7px;
+  z-index: 99;
+  line-height: 1;
+}
+
+.ekwc-compare-modal-close:hover,
+.ekwc-compare-modal-close:focus {
+	color: rgb(54, 54, 54);
+	text-decoration: none;
+}
+
+body.overflow-hidden {
+	overflow: hidden;
+}
+
+.ekwc-compare-modal::-webkit-scrollbar,
+.ekwc-scrollable-table::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+
+.ekwc-compare-modal::-webkit-scrollbar-track,
+.ekwc-scrollable-table::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 4px;
+}
+
+.ekwc-compare-modal::-webkit-scrollbar-thumb,
+.ekwc-scrollable-table::-webkit-scrollbar-thumb {
+	background: #c1c1c1;
+	border-radius: 8px;
+}
+
+
+/** Start Css for compare table **/
+
+.ekwc-rate .star-rating {
+  float: none;
+  overflow: hidden;
+  position: relative;
+  height: 1em;
+  line-height: 1;
+  font-size: 1em;
+  width: 5.4em;
+  font-family: WooCommerce;
+  right: auto;
+  color: #e6c456 !important;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ekwc-rate .star-rating:before {
+    float: right;
+    content: "sssss";
+    color: #cfc8d8;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.ekwc-rate .star-rating span::before {
+    float: right;
+    content: "SSSSS";
+    top: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.ekwc-rate .star-rating span {
+    float: right;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding-top: 1.5em;
+}
+
+.ekwc-compare-container{
+    max-width: 100%;
+}
+
+.ekwc-description{
+    margin: 0;
+    padding: 0;
+}
+
+#ekwc-compare-modal .ekwc-controls {
+    margin-top: 10px;
+    padding: 0px 40px;
+}
+
+.woocommerce-shop .ekwc-compare-button-wrapper,
+.ekwc-horizontal-table td.ekwc-info {
+  text-align: center;
+}
+
+@media(max-width: 768px){
+  .ekwc-comparison-table td {
+      max-width: 200px
+  }
+}
+
+@media(max-width: 540px){
+
+  .ekwc-comparison-table td {
+      max-width: 160px
+  }
+
+  .ekwc-sticky-compare {
+    gap: 8px;
+  }
+
+}
+
+
+.ekwc-comparison-table.ekwc-vertical-table .first-th{
+  border: none;
+  background-color: transparent;
+}
+
+@media only screen and (min-width: 1170px) {
+  .ekwc-comparison-table.ekwc-vertical-table th, 
+  .ekwc-comparison-table.ekwc-vertical-table td {
+      font-size: 12px;
+      width: 270px;
+      max-width: 270px;
+  }
+}
+
+.ekwc-comparison-table.ekwc-vertical-table .ekwc-description {
+  line-height: 1.4;
+}
+
+
+/*---------------  Compare Table Style 1 Start -----------*/
+
+.ekwc-comparison-table.ekwc-vertical-table.style-1 .fa-long-arrow-alt-right{
+  margin-right: 10px;
+  color: #C3CCDC !important;
+  font-weight: 900 !important;
+}
+
+.ekwc-comparison-table.ekwc-vertical-table.style-1 th,
+.ekwc-comparison-table.ekwc-vertical-table.style-1 td{
+  font-size: 16px;
+  padding: 23px;
+  font-family: "Poppins", Sans-serif;
+  background-color: white;
+}
+
+.ekwc-comparison-table.ekwc-vertical-table.style-1 .ekwc-compare-add-to-cart a{
+  background-color: #000;
+  color: #fefefe;
+  padding: 15px 15px 15px 15px;
+  line-height: 1;
+}
+
+.ekwc-comparison-table.ekwc-vertical-table.style-1 .ekwc-info{
+  color: #252525;
+  font-weight: 400;
+}
+
+/*------------ Compare Table Style 1 End ---------------- */
+
+
+/*------------ Compare horizontal Table Style 1 Start ---------------- */
+
+
+.ekwc-comparison-table.ekwc-horizontal-table.compare-table .fa-long-arrow-alt-right{
+  margin-right: 10px;
+  color: #C3CCDC !important;
+  font-weight: 900 !important;
+}
+
+.ekwc-comparison-table.ekwc-horizontal-table.compare-table th,
+.ekwc-comparison-table.ekwc-horizontal-table.compare-table td{
+  font-size: 16px;
+  padding: 23px;
+  font-family: "Poppins", Sans-serif;
+  background-color: white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.ekwc-comparison-table.ekwc-horizontal-table.compare-table .ekwc-compare-add-to-cart a{
+  background-color: #000;
+  color: #fefefe;
+  padding: 15px 15px 15px 15px;
+  line-height: 1;
+}
+
+.ekwc-comparison-table.ekwc-horizontal-table.compare-table .ekwc-info{
+  color: #252525;
+  font-weight: 400;
+}
+
+/*------------ Compare horizontal Table Style 1 End ---------------- */
